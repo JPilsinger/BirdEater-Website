@@ -957,7 +957,8 @@ dialog img {
 .patent-visual { margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1.15fr; gap: 4rem; align-items: start; }
 .patent-visual h3 { font-size: 2rem; margin-bottom: 1rem; }
 .patent-drawing { width: min(100%, 20rem); justify-self: center; }
-.patent-drawing .shot { background: white; padding: 1rem; }
+.patent-drawing .shot { background: #000; padding: 1rem; }
+.patent-drawing img, #viewer-img.is-inverted { filter: invert(1); }
 @media (max-width: 700px) {
   .render-grid, .patent-visual { grid-template-columns: 1fr; gap: 2rem; }
   .render-detail, .render-hub, .render-top { grid-column: auto; grid-row: auto; }

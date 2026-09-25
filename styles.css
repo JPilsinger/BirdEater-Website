@@ -998,3 +998,17 @@ dialog img {
   .reveal, .frame.reveal { transition: none; }
   .reveal.is-dimmed { opacity: 1; transform: none; }
 }
+
+/* Center the product imagery throughout the story. */
+.story-hero { grid-template-columns: 1fr; text-align: center; }
+.hero-copy .lede { margin-inline: auto; }
+.hero-product { margin-block: 2.5rem; }
+.frame { margin-inline: auto; justify-self: center; }
+.frame figcaption { text-align: center; }
+#concept > .split { grid-template-columns: 1fr; }
+#concept .section-head { max-width: none; }
+#concept .prose { max-width: 44rem; }
+.render-grid { grid-template-columns: 1fr; gap: 3rem; }
+.render-detail, .render-hub, .render-top { grid-column: 1; grid-row: auto; }
+.patent-visual { grid-template-columns: 1fr; }
+.patent-visual > div { max-width: 44rem; }

@@ -963,3 +963,37 @@ dialog img {
   .render-detail, .render-hub, .render-top { grid-column: auto; grid-row: auto; }
   .render-hub { width: min(100%, 20rem); justify-self: center; }
 }
+
+/* Quiet cinematic transitions; content stays available without JavaScript. */
+.hero { position: relative; min-height: calc(100svh - var(--nav)); display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+.hero::after { content: ""; position: absolute; width: 50rem; height: 50rem; right: -24rem; top: -18rem; border-radius: 50%; background: radial-gradient(circle, rgba(198,163,106,.09), transparent 66%); pointer-events: none; z-index: 0; }
+.hero .wrap, .scroll-cue { position: relative; z-index: 1; }
+.story-hero { width: min(var(--wrap), calc(100% - 2.5rem)); }
+.story-hero h1 { font-size: clamp(4rem, 7.7vw, 7rem); letter-spacing: -.015em; }
+.hero-saved { display: inline-block; animation: saved-reveal 1.1s cubic-bezier(.16,1,.3,1) 1.5s both; }
+@keyframes saved-reveal { from { opacity: 0; transform: translateY(18px); filter: blur(7px); } to { opacity: 1; transform: translateY(0); filter: blur(0); } }
+.hero-note { border-left: 0; padding: 2rem; background: radial-gradient(ellipse at 10% 50%, rgba(198,163,106,.055), transparent 75%); }
+.hero-statement { font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.25; }
+.scroll-cue { display: flex; align-items: center; gap: 1rem; width: min(var(--wrap), calc(100% - 2.5rem)); margin: 0 auto 1rem; font: .65rem/1.5 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+.scroll-cue span { width: 1px; height: 2.5rem; background: linear-gradient(transparent, var(--brass)); }
+.section { position: relative; padding-block: 7rem; }
+.section-alt { border-block-color: transparent; background: radial-gradient(ellipse at 50% 30%, rgba(198,163,106,.035), transparent 65%); }
+.render-story { padding-top: 1rem; }
+.frame .shot { box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+.render-grid .shot, .product-render .shot { position: relative; }
+.render-grid .shot::after, .product-render .shot::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 35px 8px rgba(8,9,11,.35); }
+.reveal { transition: opacity .85s ease, transform 1s cubic-bezier(.16,1,.3,1); }
+.reveal.is-dimmed { opacity: 0; transform: translateY(22px); }
+.reveal.is-revealed, .reveal:focus-within { opacity: 1; transform: translateY(0); }
+.frame.reveal { transition-duration: 1s, 1.2s; }
+@media (max-width: 900px) {
+  .hero-note { padding: 1.5rem 0 0; border-top: 1px solid var(--line-soft); background: none; }
+  .section { padding-block: 4.5rem; }
+  .render-story { padding-top: 0; }
+}
+@media (max-width: 560px) { .story-hero h1 { font-size: clamp(3.8rem, 17vw, 5.2rem); } }
+@media (prefers-reduced-motion: reduce) {
+  .hero-saved { animation: none; }
+  .reveal, .frame.reveal { transition: none; }
+  .reveal.is-dimmed { opacity: 1; transform: none; }
+}

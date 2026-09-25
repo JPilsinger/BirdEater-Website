@@ -56,3 +56,30 @@ viewer.addEventListener("click", (event) => {
 viewer.addEventListener("close", () => {
   viewerImg.removeAttribute("src");
 });
+
+// Reversible reveals follow the viewport without capturing or changing scrolling.
+const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+const candidates = [...document.querySelectorAll(
+  ".section-head, .narrative-grid > .prose, .split > div, .frame, .team-grid article, .milestones li, .progress-intro, .evidence-note, .close-grid > div, .patent-visual > div, .render-intro"
+)];
+const revealTargets = candidates.filter((node) => !candidates.some((parent) => parent !== node && parent.contains(node)));
+let revealObserver;
+function configureReveals() {
+  revealObserver?.disconnect();
+  revealTargets.forEach((node) => node.classList.remove("reveal", "is-dimmed", "is-revealed"));
+  if (motionPreference.matches || !("IntersectionObserver" in window)) return;
+  revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(({ target, isIntersecting }) => {
+      target.classList.toggle("is-revealed", isIntersecting);
+      target.classList.toggle("is-dimmed", !isIntersecting);
+    });
+  }, { rootMargin: "-4% 0px -7% 0px", threshold: 0 });
+  revealTargets.forEach((node) => {
+    node.classList.add("reveal");
+    const bounds = node.getBoundingClientRect();
+    if (bounds.top >= window.innerHeight || bounds.bottom <= 0) node.classList.add("is-dimmed");
+    revealObserver.observe(node);
+  });
+}
+motionPreference.addEventListener("change", configureReveals);
+configureReveals();

@@ -55,39 +55,3 @@ viewer.addEventListener("click", (event) => {
 viewer.addEventListener("close", () => {
   viewerImg.removeAttribute("src");
 });
-
-const slider = document.querySelector(".slider");
-if (slider) {
-  const slides = [...slider.querySelectorAll(".slider-frame .shot")];
-  const captions = [...slider.querySelectorAll(".slider-caption > span:not(.slider-dots)")];
-  const dots = [...slider.querySelectorAll(".slider-dots button")];
-  let index = 0;
-  let timer = 0;
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  const show = (next) => {
-    index = (next + slides.length) % slides.length;
-    slides.forEach((slide, i) => slide.classList.toggle("is-active", i === index));
-    captions.forEach((caption, i) => caption.classList.toggle("is-active", i === index));
-    dots.forEach((dot, i) => dot.setAttribute("aria-selected", String(i === index)));
-  };
-
-  const start = () => {
-    if (reduce || slides.length < 2) return;
-    clearInterval(timer);
-    timer = setInterval(() => show(index + 1), 5000);
-  };
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      show(i);
-      start();
-    });
-  });
-
-  slider.addEventListener("mouseenter", () => clearInterval(timer));
-  slider.addEventListener("mouseleave", start);
-  slider.addEventListener("focusin", () => clearInterval(timer));
-  slider.addEventListener("focusout", start);
-  start();
-}

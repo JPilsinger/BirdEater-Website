@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BirdEater — a passive 40mm anti-FPV round</title>
+    <title>BirdEater — A chance to protect yourself</title>
     <meta
       name="description"
-      content="BirdEater is a simulated 40mm anti-FPV round with no explosive and no electronics. A hackathon test shot, and a patent application with positive search reports."
+      content="BirdEater: a two-person engineering team developing a counter-drone concept. First prototype deployment test completed. Positive international patent search results. Seeking defence hackathons."
     />
     <meta name="color-scheme" content="dark" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -35,287 +35,99 @@
         <span class="sr">Menu</span>
       </button>
       <nav id="site-nav" class="nav-links" aria-label="Sections">
-        <a href="#spool">Invention</a>
-        <a href="#deployed">Net</a>
-        <a href="#use">Use</a>
-        <a href="#test">The test</a>
+        <a href="#why">Why BirdEater</a>
+        <a href="#concept">The concept</a>
+        <a href="#progress">Progress</a>
+        <a href="#team">Team</a>
+        <a href="#invite">Invite us</a>
       </nav>
     </header>
 
     <main id="content">
       <section class="hero" id="top">
-        <div class="wrap hero-grid">
+        <div class="wrap hero-grid story-hero">
           <div class="hero-copy">
-            <p class="eyebrow"><span>01</span> For hackathon panels · 40mm anti-FPV</p>
-            <h1>Bird<span>eater</span></h1>
-            <p class="lede">
-              The missing layer is the last few metres, where an FPV is already
-              too close to jam. A passive 40mm round for that layer. No explosive,
-              no electronics. Spin opens a Kevlar net.
-            </p>
+            <p class="eyebrow">Austria / Independent engineering team</p>
+            <h1>A chance to<br>protect yourself.<br><span>When seconds<br>matter.</span></h1>
+            <p class="lede">BirdEater began with a question: how can a person on the ground defend themselves against a drone?</p>
+            <p class="lede">We are a reserve officer and engineer, and a mechatronics specialist, turning that question into a physical proof of concept.</p>
             <div class="hero-actions">
-              <a class="btn" href="#test">The test we want to run</a>
-              <a class="btn btn-ghost" href="#spool">The invention</a>
+              <a class="btn" href="#progress">Our first breakthrough</a>
+              <a class="btn btn-ghost" href="#invite">Invite us to your hackathon</a>
             </div>
           </div>
-
-          <div class="hero-stage">
-            <figure class="frame frame-hero">
-              <button type="button" class="shot" data-full="images/cartridge.jpg" data-alt="BirdEater 40mm cartridge, eye level, with a dark ogive, capture ring, and brass case.">
-                <img
-                  src="images/cartridge.jpg"
-                  alt="BirdEater 40mm cartridge, eye level, with a dark ogive, capture ring, and brass case."
-                  width="571"
-                  height="1024"
-                />
-              </button>
-              <ul class="callouts">
-                <li>
-                  <strong>Capsule</strong>
-                  <span>Steel, no fill inside</span>
-                </li>
-                <li>
-                  <strong>Net</strong>
-                  <span>Kevlar, paid out by spin</span>
-                </li>
-                <li>
-                  <strong>Case</strong>
-                  <span>40mm, launcher fit</span>
-                </li>
-              </ul>
-              <figcaption>Eye level · sealed cartridge</figcaption>
-            </figure>
+          <aside class="hero-note" aria-label="Project status">
+            <p class="index">BirdEater / Field notes 01</p>
+            <p class="hero-statement">The person.<br>The problem.<br>The reason we started.</p>
+            <div class="status-marker"><span aria-hidden="true"></span> First prototype deployment test completed</div>
+            <p class="note-copy">An early-stage project. A physical milestone. A next step to demonstrate together.</p>
+          </aside>
+        </div>
+      </section>
+      <section class="section section-alt" id="why">
+        <div class="wrap narrative-grid">
+          <header class="section-head"><p class="index">01 / The motivation</p><h2>The person on<br>the ground.</h2></header>
+          <div class="prose">
+            <p class="founder-motivation">Seeing individual soldiers pursued by FPV drones motivated Jan to explore a way for the person on the ground to defend themselves.</p>
+            <p class="quote-credit">Jan Pilsinger / Founder &amp; Austrian reserve officer</p>
+            <p>Following the war in Ukraine since its beginning brought that question into sharp focus for Jan. His military experience made it personal; his engineering background gave him a way to start exploring an answer.</p>
+            <p>BirdEater focuses on last-resort self-protection: an individual faces an immediate drone threat and has little time to respond. That is the situation motivating our work.</p>
           </div>
         </div>
       </section>
-
-      <section class="strip" aria-label="Design targets">
-        <div class="wrap">
-          <div class="strip-row">
-            <p><span>Caliber</span> 40mm NATO</p>
-            <p><span>Fill</span> None</p>
-            <p><span>Net</span> 80 cm</p>
-            <p><span>Opens</span> 10 m · 200 ms</p>
-            <p><span>Reach</span> 30–40 m</p>
-          </div>
-          <p class="strip-note">Design targets, from simulation. Not yet fired.</p>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="spool">
-        <div class="wrap">
-          <header class="section-head">
-            <p class="index">02 / The invention</p>
-            <h2>The winding we filed.</h2>
-          </header>
-          <figure class="frame frame-wide">
-            <button type="button" class="shot" data-full="images/spool.jpg" data-alt="Close view of the internal spool: braided Kevlar coils and polished steel spheres on short pins.">
-              <img
-                src="images/spool.jpg"
-                alt="Close view of the internal spool: braided Kevlar coils and polished steel spheres on short pins."
-                width="1024"
-                height="686"
-                loading="lazy"
-              />
-            </button>
-            <figcaption>Interior · Kevlar on a steel spool</figcaption>
-          </figure>
-          <ol class="anatomy">
-            <li>
-              <span>01</span>
-              <h3>Wound</h3>
-              <p>Kevlar on a steel spool, packed so the spin after the muzzle pays it out.</p>
-            </li>
-            <li>
-              <span>02</span>
-              <h3>Spread</h3>
-              <p>Steel spheres carry the net. Design target: 80 cm across.</p>
-            </li>
-            <li>
-              <span>03</span>
-              <h3>Time</h3>
-              <p>Open within 10 m and within 200 ms. Both figures are from simulation.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="section" id="deployed">
-        <div class="wrap">
-          <header class="section-head">
-            <p class="index">03 / The net</p>
-            <h2>A net, not a warhead.</h2>
-          </header>
-          <div class="split split-reverse">
-            <div class="prose">
-              <p>
-                Opened, the round is a hub and a net. Kevlar was chosen on
-                calculation, to hold heat and a cutting edge, so a rotor fouls
-                in the line instead of parting it. That choice is not yet a firing trial.
-              </p>
-              <p>
-                The engagement, as designed, is 30 to 40 metres. About as far
-                as the aircraft is seen in time. The form is the 40mm a grenade
-                launcher already fires, under the barrel or on its own.
-              </p>
-            </div>
-            <figure class="frame frame-portrait">
-              <button type="button" class="shot" data-full="images/hub.jpg" data-alt="Deployed BirdEater hub: dark brushed body, domed crown, and tether lines leaving the waist.">
-                <img
-                  src="images/hub.jpg"
-                  alt="Deployed BirdEater hub: dark brushed body, domed crown, and tether lines leaving the waist."
-                  width="571"
-                  height="1024"
-                  loading="lazy"
-                />
-              </button>
-              <figcaption>Opened · hub at the center of the net</figcaption>
-            </figure>
-          </div>
-          <figure class="net-ill">
-            <button type="button" class="shot" data-full="images/net.jpg" data-alt="Illustration of the opened net: a central hub, lines out to weighted points.">
-              <img
-                src="images/net.jpg"
-                alt="Illustration of the opened net: a central hub, lines out to weighted points."
-                width="1024"
-                height="1024"
-                loading="lazy"
-              />
-            </button>
-            <figcaption>Illustration. Hub at the center, weights at the edge.</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="section" id="use">
-        <div class="wrap">
-          <header class="section-head">
-            <p class="index">04 / Use</p>
-            <h2>Employment concepts.</h2>
-          </header>
-          <div class="prose field-lead">
-            <p>
-              Not trials. A spotter in a vehicle, and an officer over a crowd.
-              In both, the launcher is already on the weapon in their hands.
-              Underbarrel, or stand-alone 40mm. No second gun.
-            </p>
-          </div>
-        </div>
-        <figure class="field scenario slider">
-          <div class="slider-frame">
-            <button type="button" class="shot is-active" data-full="images/crew.jpg" data-alt="Employment concept: a spotter in the back of a truck fires toward an FPV, with a net open in the air short of the crew.">
-              <img
-                src="images/crew.jpg"
-                alt="Employment concept: a spotter in the back of a truck fires toward an FPV, with a net open in the air short of the crew."
-                width="1024"
-                height="682"
-              />
-            </button>
-            <button type="button" class="shot" data-full="images/column.jpg" data-alt="Employment concept: an FPV strike ends beside a column of vehicles, short of the armor.">
-              <img
-                src="images/column.jpg"
-                alt="Employment concept: an FPV strike ends beside a column of vehicles, short of the armor."
-                width="1024"
-                height="769"
-              />
-            </button>
-          </div>
-          <figcaption class="wrap slider-caption">
-            <span class="slider-dots">
-              <button type="button" aria-label="Show the crew" aria-selected="true"></button>
-              <button type="button" aria-label="Show the column"></button>
-            </span>
-            <span class="is-active">Concept. The net is meant to be up short of the crew.</span>
-            <span>Concept. The strike ends beside the road, not on the armor.</span>
-          </figcaption>
-        </figure>
-        <div class="wrap carriers">
-          <figure>
-            <button type="button" class="shot" data-full="images/soldier.jpg" data-alt="Employment concept: a soldier at a roadside position holds a 40mm grenade launcher, with a military vehicle behind him.">
-              <img
-                src="images/soldier.jpg"
-                alt="Employment concept: a soldier at a roadside position holds a 40mm grenade launcher, with a military vehicle behind him."
-                width="682"
-                height="1024"
-                loading="lazy"
-              />
-            </button>
-            <figcaption>Soldier. A 40mm launcher in his hands, beside the vehicle and the road.</figcaption>
-          </figure>
-          <figure>
-            <button type="button" class="shot" data-full="images/police.jpg" data-alt="Employment concept: a police officer in a public square holds a carbine with a 40mm launcher, with a crowd and a stage behind him.">
-              <img
-                src="images/police.jpg"
-                alt="Employment concept: a police officer in a public square holds a carbine with a 40mm launcher, with a crowd and a stage behind him."
-                width="682"
-                height="1024"
-                loading="lazy"
-              />
-            </button>
-            <figcaption>Police. The same launcher under the carbine, over a crowd and a stage.</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="test">
-        <div class="wrap close-grid">
+      <section class="section" id="concept">
+        <div class="wrap split split-reverse">
           <div>
-            <p class="index">05 / The test</p>
-            <h2>One shot on our stand.</h2>
-            <p class="lede">
-              We are asking European defence hackathons for a place to fire
-              one complete opening shot. The stand is ours. It is not a service
-              grenade launcher, and the round is not a brass cartridge.
-              Nothing on this page has been fired yet.
-            </p>
-            <p class="lede team">
-              Jan Pilsinger, Austria. Reserve officer in the Austrian Armed
-              Forces. Dipl.-Ing. in electrical engineering and medical
-              technology, and an AI manager in an innovation team.               He knows the requirement from the troop, and he can place what
-              is coming out of Ukraine against it. His co-founder studies
-              smart manufacturing. Both work in rapid prototyping. BirdEater
-              is the working name.
-            </p>
-            <a class="btn" href="mailto:jan.pilsinger@gmail.com">jan.pilsinger@gmail.com</a>
+            <header class="section-head"><p class="index">02 / The concept</p><h2>An existing platform.<br>A new protective concept.</h2></header>
+            <div class="prose"><p>BirdEater is a 40 mm net-deployment concept intended for compatibility with existing stand-alone and underbarrel grenade launchers.</p><p>The development goal is an additional protective option that fits equipment soldiers already carry. Compatibility, interception performance and cost remain to be validated.</p></div>
+            <p class="stamp">Designed for self-protection</p>
           </div>
-          <dl class="dossier">
-            <div>
-              <dt>Stage</dt>
-              <dd>Simulation</dd>
-            </div>
-            <div>
-              <dt>Next</dt>
-              <dd>One opening shot</dd>
-            </div>
-            <div>
-              <dt>Stand</dt>
-              <dd>Ours, not issued</dd>
-            </div>
-            <div>
-              <dt>Materials</dt>
-              <dd>€15–20</dd>
-            </div>
-            <div>
-              <dt>For sale</dt>
-              <dd>Patent application</dd>
-            </div>
-            <div>
-              <dt>Searches</dt>
-              <dd>Positive, AT and EP</dd>
-            </div>
-            <div>
-              <dt>Priority</dt>
-              <dd>Two years open</dd>
-            </div>
-            <div>
-              <dt>Except</dt>
-              <dd>Taiwan, Argentina</dd>
-            </div>
-          </dl>
+          <figure class="frame product-render">
+            <button type="button" class="shot" data-full="images/cartridge.jpg" data-alt="Concept rendering of the proposed BirdEater cartridge; not a photograph of the tested prototype." aria-label="Enlarge cartridge concept rendering">
+              <img src="images/cartridge.jpg" alt="Concept rendering of the proposed BirdEater cartridge." width="571" height="1024" loading="lazy">
+            </button>
+            <figcaption>Concept rendering / Proposed product form, not the tested prototype</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="section section-alt" id="progress">
+        <div class="wrap">
+          <header class="section-head"><p class="index">03 / The first breakthrough</p><h2>From simulation<br>to physical deployment.</h2></header>
+          <p class="lede progress-intro">Our first prototype launch test successfully deployed the net. For us, this was the moment the project moved beyond simulation.</p>
+          <ol class="anatomy milestones">
+            <li><span>01 / Modelled</span><h3>Simulation</h3><p>We developed and simulated the concept to inform our initial prototype work.</p></li>
+            <li><span>02 / Built</span><h3>Rapid prototyping</h3><p>We produced 3D-printed parts and built a physical prototype as a two-person team.</p></li>
+            <li><span>03 / Observed</span><h3>First deployment</h3><p>In an initial launch test, the prototype successfully deployed its net.</p></li>
+          </ol>
+          <div class="evidence-note"><p class="index">What this milestone establishes</p><p>A first demonstration of physical net deployment, reported by the team. It does not yet establish drone interception performance, deployment timing, operational range or compatibility with service launchers.</p></div>
+        </div>
+      </section>
+      <section class="section" id="ip">
+        <div class="wrap narrative-grid">
+          <header class="section-head"><p class="index">04 / Independent assessment</p><h2>Patent pending.<br>Positive international<br>search results.</h2></header>
+          <div class="prose">
+            <p>The European Patent Office, acting as International Searching Authority, assessed all 15 claims positively for novelty, inventive step and industrial applicability in its written opinion issued in June 2026.</p>
+            <p>This is a preliminary, non-binding assessment of the claimed invention. No patent has yet been granted. It is separate from validation of the prototype’s technical performance.</p>
+            <dl class="dossier patent-facts"><div><dt>International application</dt><dd>PCT/EP2025/083690</dd></div><div><dt>Filed</dt><dd>20 November 2025</dd></div><div><dt>Written opinion</dt><dd>All 15 claims positive</dd></div><div><dt>Status</dt><dd>Patent pending</dd></div></dl>
+          </div>
+        </div>
+      </section>
+      <section class="section section-alt" id="team">
+        <div class="wrap">
+          <header class="section-head"><p class="index">05 / The people behind BirdEater</p><h2>Operational perspective.<br>Engineering execution.</h2></header>
+          <div class="team-grid">
+            <article><p class="index">Military experience / AI engineering</p><h3>Jan Pilsinger</h3><div class="prose"><p>Austrian reserve officer with 15 years of military experience. Academic background in Electrical and Information Engineering and Biomedical Engineering.</p><p>In his professional role, Jan leads a team of AI engineers and developers within an innovation team. He brings the operational perspective and engineering background behind BirdEater.</p></div></article>
+            <article><p class="index">Mechatronics / Smart manufacturing</p><h3>Our co-founder</h3><div class="prose"><p>With a background in mechatronics and smart manufacturing, our co-founder brings hands-on implementation and prototyping capabilities.</p><p>Together, we develop the concept, build prototypes and bring the idea into the physical world.</p></div></article>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="invite">
+        <div class="wrap close-grid">
+          <div><p class="index">06 / The next step</p><h2>Give the next<br>demonstration a place.</h2><p class="lede">We are looking for defence hackathons where we can present BirdEater, demonstrate our current prototype within an agreed test framework and receive critical technical and industry feedback.</p><div class="hero-actions"><a class="btn" href="mailto:jan.pilsinger@gmail.com?subject=BirdEater%20hackathon%20invitation">Invite BirdEater</a><a class="btn btn-ghost" href="mailto:jan.pilsinger@gmail.com">Contact the team</a></div></div>
+          <div class="prose next-steps"><h3>What we bring</h3><p>A focused problem, a physical prototype, experience across military service and engineering, and a positive international patentability assessment.</p><h3>What we seek</h3><p>A setting for a demonstration, constructive evaluation and introductions to potential development and industry partners.</p><h3>Beyond the hackathon</h3><p>We are exploring industrial adoption through licensing or acquisition of the IP, or funding to establish a dedicated defence technology venture.</p></div>
         </div>
       </section>
     </main>
-
     <footer class="footer">
       <div class="wrap footer-row">
         <p>BirdEater · working name</p>

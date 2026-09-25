@@ -42,6 +42,7 @@ const viewerImg = document.querySelector("#viewer-img");
 
 document.querySelectorAll(".shot").forEach((button) => {
   button.addEventListener("click", () => {
+    viewer.style.setProperty("--viewer-width", button.dataset.displayWidth ? `${button.dataset.displayWidth}px` : "36rem");
     viewerImg.src = button.dataset.full;
     viewerImg.alt = button.dataset.alt || "";
     viewer.showModal();

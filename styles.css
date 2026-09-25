@@ -752,7 +752,7 @@ h2 {
 
 dialog {
   width: fit-content;
-  max-width: min(92vw, 36rem);
+  max-width: min(92vw, var(--viewer-width, 36rem));
   padding: 0;
   border: 1px solid var(--line);
   background: #0c0d10;
@@ -774,7 +774,7 @@ dialog img {
   display: block;
   width: auto;
   height: auto;
-  max-width: min(92vw, 36rem);
+  max-width: min(92vw, var(--viewer-width, 36rem));
   max-height: 78vh;
 }
 
@@ -949,17 +949,17 @@ dialog img {
 .render-story { padding-top: 0; }
 .render-intro { max-width: 44rem; margin-bottom: 2.5rem; }
 .render-grid { display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 2rem; align-items: start; }
-.render-detail { grid-column: 1; }
-.render-hub { grid-column: 2; grid-row: 1 / span 2; }
-.render-top { grid-column: 1; max-width: 38rem; }
+.render-detail { grid-column: 1; width: min(100%, 30rem); }
+.render-hub { grid-column: 2; grid-row: 1 / span 2; width: min(100%, 20rem); }
+.render-top { grid-column: 1; width: min(100%, 26rem); }
 .render-grid .shot { background: #101114; }
 .render-grid figcaption { line-height: 1.7; color: var(--muted); }
 .patent-visual { margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1.15fr; gap: 4rem; align-items: start; }
 .patent-visual h3 { font-size: 2rem; margin-bottom: 1rem; }
-.patent-drawing { width: min(100%, 26rem); justify-self: center; }
+.patent-drawing { width: min(100%, 20rem); justify-self: center; }
 .patent-drawing .shot { background: white; padding: 1rem; }
 @media (max-width: 700px) {
   .render-grid, .patent-visual { grid-template-columns: 1fr; gap: 2rem; }
   .render-detail, .render-hub, .render-top { grid-column: auto; grid-row: auto; }
-  .render-hub { width: min(100%, 23rem); justify-self: center; }
+  .render-hub { width: min(100%, 20rem); justify-self: center; }
 }

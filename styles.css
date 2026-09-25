@@ -944,3 +944,22 @@ dialog img {
   .story-hero h1 { font-size: clamp(2.4rem, 9.5vw, 3.3rem); }
   .patent-facts { grid-template-columns: 1fr; }
 }
+
+/* CAD renderings accompany the concept; test evidence remains separate. */
+.render-story { padding-top: 0; }
+.render-intro { max-width: 44rem; margin-bottom: 2.5rem; }
+.render-grid { display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 2rem; align-items: start; }
+.render-detail { grid-column: 1; }
+.render-hub { grid-column: 2; grid-row: 1 / span 2; }
+.render-top { grid-column: 1; max-width: 38rem; }
+.render-grid .shot { background: #101114; }
+.render-grid figcaption { line-height: 1.7; color: var(--muted); }
+.patent-visual { margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1.15fr; gap: 4rem; align-items: start; }
+.patent-visual h3 { font-size: 2rem; margin-bottom: 1rem; }
+.patent-drawing { width: min(100%, 26rem); justify-self: center; }
+.patent-drawing .shot { background: white; padding: 1rem; }
+@media (max-width: 700px) {
+  .render-grid, .patent-visual { grid-template-columns: 1fr; gap: 2rem; }
+  .render-detail, .render-hub, .render-top { grid-column: auto; grid-row: auto; }
+  .render-hub { width: min(100%, 23rem); justify-self: center; }
+}

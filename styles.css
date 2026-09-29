@@ -1042,3 +1042,5 @@ dialog img { object-fit: contain; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .footer-row { overflow-wrap: anywhere; }
 }
+
+.render-note { display: block; margin-top: 1rem; color: var(--dim); font-family: var(--mono); font-size: .7rem; line-height: 1.6; }

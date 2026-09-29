@@ -61,7 +61,7 @@ viewer.addEventListener("close", () => {
 // Reversible reveals follow the viewport without capturing or changing scrolling.
 const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
 const candidates = [...document.querySelectorAll(
-  ".section-head, .narrative-grid > .prose, .split > div, .frame, .team-grid article, .milestones li, .progress-intro, .evidence-note, .close-grid > div, .patent-visual > div, .render-intro"
+  ".section-head, .ip-copy, .narrative-grid > .prose, .split > div, .frame, .team-grid article, .milestones li, .progress-intro, .evidence-note, .close-grid > div, .patent-visual > div, .render-intro"
 )];
 const revealTargets = candidates.filter((node) => !candidates.some((parent) => parent !== node && parent.contains(node)));
 let revealObserver;

@@ -1044,3 +1044,9 @@ dialog img { object-fit: contain; }
 }
 
 .render-note { display: block; margin-top: 1rem; color: var(--dim); font-family: var(--mono); font-size: .7rem; line-height: 1.6; }
+
+/* Patent assessment and application drawing form one section. */
+#ip .section-head { max-width: 52rem; }
+.ip-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.ip-grid .patent-drawing { margin-top: 0; }
+@media (max-width: 900px) { .ip-grid { grid-template-columns: 1fr; } }

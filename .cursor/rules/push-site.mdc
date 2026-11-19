@@ -1,0 +1,6 @@
+---
+description: Push BirdEater website changes to main as soon as they are done
+alwaysApply: true
+---
+
+After changing the public site (index.html, styles.css, main.js, images), commit those files and push to origin main in the same turn. Do not wait to be asked. Leave unrelated untracked files (pitch, loi, cards, sim, eudis) out of the commit.

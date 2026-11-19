@@ -1053,7 +1053,7 @@ dialog img { object-fit: contain; }
 
 .traction-lead {
   height: 4cm;
-  margin-top: 1.75rem;
+  margin-top: 0.25rem;
   border-block: 1px solid var(--line-soft);
   background: rgba(16, 17, 20, 0.72);
 }
@@ -1107,16 +1107,17 @@ dialog img { object-fit: contain; }
   text-transform: uppercase;
   color: var(--dim);
 }
-.hero .hero-product { margin-top: 1.75rem; }
+.hero .hero-product { margin-top: 1.25rem; margin-bottom: 0.85rem; }
 @media (max-width: 720px) {
+  .traction-lead { height: auto; min-height: 4cm; }
   .proof {
     flex-direction: column;
     justify-content: center;
     gap: 0.2rem;
-    padding: 0 0.35rem;
+    padding: 0.45rem 0.35rem;
     text-align: center;
   }
   .proof img { max-width: 1.7cm; max-height: 1.15cm; }
-  .proof strong { font-size: 0.72rem; letter-spacing: 0.03em; }
-  .proof em { font-size: 0.5rem; letter-spacing: 0.04em; }
+  .proof strong { font-size: 0.72rem; letter-spacing: 0.03em; white-space: normal; }
+  .proof em { font-size: 0.5rem; letter-spacing: 0.04em; white-space: normal; }
 }

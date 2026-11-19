@@ -1097,9 +1097,6 @@ dialog img { object-fit: contain; }
 .proof em {
   display: block;
   margin-top: 0.22rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   font-style: normal;
   font-family: var(--mono);
   font-size: 0.62rem;
